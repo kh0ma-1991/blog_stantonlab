@@ -4,12 +4,14 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.page(params[:page])
+    @posts = Post.all.order(:created_at).page(params[:page])
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @post.views += 1
+    @post.save
   end
 
   # GET /posts/new

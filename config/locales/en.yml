@@ -34,3 +34,6 @@ en:
   go_to_home: 'Home'
   fork_us: 'Fork us'
   read_more: 'READ MORE'
+  back: 'Back'
+  viewed: 'Viewed %{count} times'
+  populap_posts: 'Popular posts'

@@ -1,10 +1,10 @@
 - @posts.each do |post|
   .row.margin-top-10
-    .col-lg-10.offset-md-1.blog_short
+    .col-lg-10.offset-md-1.blog-short
       %h1= post.title
       .row
         .col-lg-3
-          = image_tag post.image, class: 'img-thumbnail rounded float-left image-200', alt: 'post_image'
+          = image_tag post.image, class: 'img-fluid rounded float-left image-200', alt: 'post_image'
         .col-lg-9
           %article
             %p
