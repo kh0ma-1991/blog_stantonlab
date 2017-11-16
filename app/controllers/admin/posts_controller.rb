@@ -4,7 +4,7 @@ class Admin::PostsController < Admin::BaseController
   # GET /admin/posts
   # GET /admin/posts.json
   def index
-    @admin_posts = Post.all
+    @admin_posts = Post.all.page(params[:page]).per(10)
   end
 
   # GET /admin/posts/1

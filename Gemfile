@@ -5,6 +5,11 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'fog-google'
+gem 'google-api-client', '> 0.8.5', '< 0.9'
+gem 'mime-types'
+gem 'carrierwave', '~> 1.1.0'
+gem 'mini_magick', '~> 4.8'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
 gem 'bootstrap4-kaminari-views'
 gem 'ffaker', '~> 2.2'
