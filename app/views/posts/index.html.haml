@@ -1,49 +1,12 @@
-.jumbotron
-  %h1.display-3 Jumbotron heading
-  %p.lead Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-  %p
-    %a.btn.btn-lg.btn-success{:href => "#", :role => "button"} Sign up today
-.row.marketing
-  .col-lg-6
-    %h4 Subheading
-    %p Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
-    %h4 Subheading
-    %p Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
-    %h4 Subheading
-    %p Maecenas sed diam eget risus varius blandit sit amet non magna.
-  .col-lg-6
-    %h4 Subheading
-    %p Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
-    %h4 Subheading
-    %p Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
-    %h4 Subheading
-    %p Maecenas sed diam eget risus varius blandit sit amet non magna.
-
-
--#%h1 Listing posts
--#
--#%table
--#  %thead
--#    %tr
--#      %th Title
--#      %th Image
--#      %th Body
--#      %th Views
--#      %th
--#      %th
--#      %th
--#
--#  %tbody
--#    - @posts.each do |post|
--#      %tr
--#        %td= post.title
--#        %td= post.image
--#        %td= post.body
--#        %td= post.views
--#        %td= link_to 'Show', post
--#        %td= link_to 'Edit', edit_post_path(post)
--#        %td= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }
--#
--#%br
--#
--#= link_to 'New Post', new_post_path
+- @posts.each do |post|
+  .row.margin-top-10
+    .col-lg-10.offset-md-1.blog_short
+      %h1= post.title
+      .row
+        .col-lg-3
+          = image_tag post.image, class: 'img-thumbnail rounded float-left image-200', alt: 'post_image'
+        .col-lg-9
+          %article
+            %p
+              = truncate(post.body, length: 150) #TODO: It can be decorated by drapper
+      = link_to t('read_more'), post, class: 'btn btn-success pull-right margin-bottom-10'
