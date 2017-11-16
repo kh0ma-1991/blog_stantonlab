@@ -1,0 +1,23 @@
+%h1 Listing posts
+
+%table.table.table-hover
+  %thead
+    %tr
+      %th Title
+      %th Views
+      %th
+      %th
+      %th
+
+  %tbody
+    - @admin_posts.each do |admin_post|
+      %tr
+        %td= admin_post.title
+        %td= admin_post.views
+        %td= link_to 'Show', admin_post_path(admin_post)
+        %td= link_to 'Edit', edit_admin_post_path(admin_post)
+        %td= link_to 'Destroy', admin_post_path(admin_post), method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Post', new_admin_post_path

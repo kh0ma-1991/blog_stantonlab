@@ -1,0 +1,17 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @admin_post.title
+%p
+  = image_tag @admin_post.image, class: 'image-800'
+%p
+  %b Body:
+  = @admin_post.body
+%p
+  %b Views:
+  = @admin_post.views
+
+= link_to 'Edit', edit_admin_post_path(@admin_post)
+\|
+= link_to 'Back', admin_posts_path
