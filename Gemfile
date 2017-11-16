@@ -5,6 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'font-awesome-sass', '~> 4.7'
+gem 'bootstrap', '~> 4.0.0.beta2.1'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'ffaker', '~> 2.2'
 gem 'haml', '~> 5.0', '>= 5.0.2'
 gem 'haml-rails', '~> 1.0'
