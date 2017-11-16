@@ -37,3 +37,10 @@ en:
   back: 'Back'
   viewed: 'Viewed %{count} times'
   populap_posts: 'Popular posts'
+
+  admin_panel:
+    panel_title: 'Admin Panel'
+    dashboard: 'Dashboard'
+    posts: 'Posts'
+    users: 'Users'
+    logout: 'Log Out'
