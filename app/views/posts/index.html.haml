@@ -10,3 +10,5 @@
             %p
               = truncate(post.body, length: 150) #TODO: It can be decorated by drapper
       = link_to t('read_more'), post, class: 'btn btn-success pull-right margin-bottom-10'
+.row.justify-content-md-center.margin-top-10
+  = paginate @posts, theme: 'twitter-bootstrap-4'
