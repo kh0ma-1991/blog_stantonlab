@@ -9,4 +9,4 @@ Admin panel has two roles: admin and copyrighter.
 
 ## DEMO
 
-See demo here [](https://blog-stantonlab.herokuapp.com)
+See demo here [https://blog-stantonlab.herokuapp.com]()
