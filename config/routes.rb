@@ -2,6 +2,7 @@ Rails.application.routes.draw do
     namespace :admin do
     devise_for :users, class_name: "Admin::User", controllers: { sessions: 'admin/sessions' }
     resources :posts
+    resources :users
     get 'dashboard', to: 'dashboard#index'
     root 'dashboard#index'
   end

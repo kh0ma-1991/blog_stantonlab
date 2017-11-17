@@ -10,8 +10,9 @@
           %a.nav-link{:href => admin_dashboard_path}
             = t('admin_panel.dashboard')
             %span.sr-only (current)
-        %li.nav-item
-          = link_to t('admin_panel.users'), admin_dashboard_path, class: 'nav-link'
+        - if can? :read, Admin::User
+          %li.nav-item
+            = link_to t('admin_panel.users'), admin_users_path, class: 'nav-link'
         %li.nav-item
           = link_to t('admin_panel.posts'), admin_posts_path, class: 'nav-link'
         %li.nav-item

@@ -1,4 +1,5 @@
 class Admin::PostsController < Admin::BaseController
+  load_and_authorize_resource param_method: :admin_post_params
   before_action :set_admin_post, only: [:show, :edit, :update, :destroy]
 
   # GET /admin/posts

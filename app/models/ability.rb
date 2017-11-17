@@ -1,9 +1,8 @@
 class Ability
   include CanCan::Ability
 
-  can :manage, :all if user.role == "admin"
-
   def initialize(user)
+    user ||= Admin::User.new
     can :manage, :all if user.role == "admin"
     can :manage, Post if user.role == "copyrighter"
     # Define abilities for the passed in user here. For example:
