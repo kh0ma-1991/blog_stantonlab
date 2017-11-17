@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-
-  namespace :admin do
+    namespace :admin do
     devise_for :users, class_name: "Admin::User", controllers: { sessions: 'admin/sessions' }
     resources :posts
     get 'dashboard', to: 'dashboard#index'

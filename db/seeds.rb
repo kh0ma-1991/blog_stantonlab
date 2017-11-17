@@ -30,4 +30,7 @@ images.each do |image|
               views: rand(0..3))
 end
 
-Admin::User.create(email: 'admin@example.com', password: '12345678')
+Admin::User.create(email: 'admin@example.com', password: '12345678', role: :admin)
+Admin::User.create(email: 'user1@example.com', password: '12345678', role: :copyrighter)
+Admin::User.create(email: 'user2@example.com', password: '12345678', role: :copyrighter)
+Admin::User.create(email: 'user3@example.com', password: '12345678', role: :copyrighter)
