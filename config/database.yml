@@ -82,6 +82,6 @@ test:
 #
 production:
   <<: *default
-  database: blog_stantonlab_production
-  username: blog_stantonlab
+  database: <%= ENV['BLOG_STANTONLAB_DATABASE'] %>
+  username: <%= ENV['BLOG_STANTONLAB_DATABASE_USERNAME'] %>
   password: <%= ENV['BLOG_STANTONLAB_DATABASE_PASSWORD'] %>
