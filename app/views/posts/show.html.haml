@@ -18,57 +18,55 @@
 .row.margin-top-10
   .col-lg-10.offset-md-1
     .row
-      .col-lg-10.offset-md-1.blog-popular
+      .col-10.offset-1.blog-popular
         %h1= t('populap_posts')
-      .row.d-lg-block.d-none
-        .col-lg-10.offset-md-1
-          .row
-            .col-lg-6
-              = image_tag popular_posts_first.image, class: 'img-fluid rounded margin-bottom-10', alt: 'post_image'
-            .col-lg-6
-              = image_tag popular_posts_last.image, class: 'img-fluid rounded margin-bottom-10', alt: 'post_image'
-          .row
-            .col-lg-6
+    .row.d-lg-block.d-none
+      .col-10.offset-1
+        .row
+          .col-lg-6
+            = image_tag popular_posts_first.image, class: 'img-fluid rounded margin-bottom-10', alt: 'post_image'
+          .col-lg-6
+            = image_tag popular_posts_last.image, class: 'img-fluid rounded margin-bottom-10', alt: 'post_image'
+        .row
+          .col-lg-6
+            %h4= popular_posts_first.title
+          .col-lg-6
+            %h4= popular_posts_last.title
+        .row
+          .col-lg-6
+            %article
+              %p
+                = truncate(popular_posts_first.body, length: 150) #TODO: It can be decorated by drapper
+          .col-lg-6
+            %article
+              %p
+                = truncate(popular_posts_last.body, length: 150) #TODO: It can be decorated by drapper
+        .row
+          .col-lg-6
+            = link_to t('read_more'), popular_posts_first, class: 'btn btn-success margin-bottom-10'
+          .col-lg-6
+            = link_to t('read_more'), popular_posts_last, class: 'btn btn-success margin-bottom-10'
+
+    .row.d-lg-none
+      .col-10.offset-1
+        .row
+          .col-lg-6.blog-short
+            = image_tag popular_posts_first.image, class: 'rounded margin-bottom-10 img-fluid', alt: 'post_image'
+            .row
               %h4= popular_posts_first.title
-            .col-lg-6
-              %h4= popular_posts_last.title
-          .row
-            .col-lg-6
+            .row
               %article
                 %p
                   = truncate(popular_posts_first.body, length: 150) #TODO: It can be decorated by drapper
-            .col-lg-6
+            .row
+              = link_to t('read_more'), popular_posts_first, class: 'btn btn-success margin-bottom-10'
+          .col-lg-6
+            = image_tag popular_posts_last.image, class: 'rounded margin-bottom-10 img-fluid', alt: 'post_image'
+            .row
+              %h4= popular_posts_last.title
+            .row
               %article
                 %p
                   = truncate(popular_posts_last.body, length: 150) #TODO: It can be decorated by drapper
-          .row
-            .col-lg-6
-              = link_to t('read_more'), popular_posts_first, class: 'btn btn-success margin-bottom-10'
-            .col-lg-6
+            .row
               = link_to t('read_more'), popular_posts_last, class: 'btn btn-success margin-bottom-10'
-
-      .row.d-lg-none
-        .col-lg-10.offset-md-1
-          .row
-            .col-lg-6.blog-short
-              .row
-                = image_tag popular_posts_first.image, class: 'rounded margin-bottom-10 image-450', alt: 'post_image'
-              .row
-                %h4= popular_posts_first.title
-              .row
-                %article
-                  %p
-                    = truncate(popular_posts_first.body, length: 150) #TODO: It can be decorated by drapper
-              .row
-                = link_to t('read_more'), popular_posts_first, class: 'btn btn-success margin-bottom-10'
-            .col-lg-6
-              .row
-                = image_tag popular_posts_last.image, class: 'rounded margin-bottom-10 image-450', alt: 'post_image'
-              .row
-                %h4= popular_posts_last.title
-              .row
-                %article
-                  %p
-                    = truncate(popular_posts_last.body, length: 150) #TODO: It can be decorated by drapper
-              .row
-                = link_to t('read_more'), popular_posts_last, class: 'btn btn-success margin-bottom-10'
