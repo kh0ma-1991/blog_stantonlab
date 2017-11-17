@@ -1,0 +1,12 @@
+.header.clearfix
+  %nav
+    %ul.nav.nav-pills.float-right
+      %li.nav-item
+        = link_to root_path, class: 'nav-link active' do
+          = t('go_to_home')
+          %span.sr-only (current)
+      %li.nav-item
+        = link_to 'https://github.com/kh0ma-1991/blog_stantonlab', class: 'nav-link' do
+          = icon('github')
+          = t('fork_us')
+  %h3.text-muted= t('project_name')

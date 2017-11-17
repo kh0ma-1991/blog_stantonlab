@@ -1,24 +1,12 @@
-# README
+# StantonLab Blog (Test Task)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is simple blog that has posts with title, body and image.
+Each post has views counter.
 
-Things you may want to cover:
+The application has admin panel, that avaible at '/admin' path.
 
-* Ruby version
+Admin panel has two roles: admin and copyrighter.
 
-* System dependencies
+## DEMO
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+See demo here [https://blog-stantonlab.herokuapp.com]()

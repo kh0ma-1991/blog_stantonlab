@@ -30,4 +30,17 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  project_name: "StantonLab Blog"
+  go_to_home: 'Home'
+  fork_us: 'Fork us'
+  read_more: 'READ MORE'
+  back: 'Back'
+  viewed: 'Viewed %{count} times'
+  populap_posts: 'Popular posts'
+
+  admin_panel:
+    panel_title: 'Admin Panel'
+    dashboard: 'Dashboard'
+    posts: 'Posts'
+    users: 'Users'
+    logout: 'Log Out'

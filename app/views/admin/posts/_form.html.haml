@@ -1,0 +1,24 @@
+= form_for @admin_post, url: (@admin_post.persisted? ? admin_post_path : admin_posts_path) do |f|
+  - if @admin_post.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@admin_post.errors.count, "error")} prohibited this admin_post from being saved:"
+      %ul
+        - @admin_post.errors.full_messages.each do |message|
+          %li= message
+
+  .form-group
+    = f.label :title
+    = f.text_field :title, class: 'form-control'
+  .form-group
+    = f.label :image
+    - if @admin_post.image
+      = image_tag @admin_post.image, class: 'image-200'
+    = f.file_field :image, class: 'form-control-file'
+  .form-group
+    = f.label :body
+    = f.text_area :body, class: 'form-control', rows: 9
+  .form-group
+    = f.label :views
+    = f.text_field :views, class: 'form-control'
+  .form-group
+    = f.submit 'Save'

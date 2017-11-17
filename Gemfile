@@ -5,7 +5,22 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+gem 'cancancan', '~> 2.1', '>= 2.1.1'
+gem 'devise', '~> 4.3'
+gem 'fog-google'
+gem 'google-api-client', '> 0.8.5', '< 0.9'
+gem 'mime-types'
+gem 'carrierwave', '~> 1.1.0'
+gem 'mini_magick', '~> 4.8'
+gem 'kaminari', '~> 1.1', '>= 1.1.1'
+gem 'bootstrap4-kaminari-views'
+gem 'ffaker', '~> 2.2'
+gem 'font-awesome-sass', '~> 4.7'
+gem 'bootstrap', '~> 4.0.0.beta2.1'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+gem 'ffaker', '~> 2.2'
+gem 'haml', '~> 5.0', '>= 5.0.2'
+gem 'haml-rails', '~> 1.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use postgresql as the database for Active Record
@@ -36,9 +51,14 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '~> 2.13'
-  gem 'selenium-webdriver'
+  gem 'figaro', '~> 1.1', '>= 1.1.1'
+end
+
+group :test do
+  gem 'rspec-rails', '~> 3.6'
+  gem 'capybara', '~> 2.15', '>= 2.15.1'
+  gem 'database_cleaner', '~> 1.6', '>= 1.6.1'
+  gem 'selenium-webdriver', '~> 3.4', '>= 3.4.4'
 end
 
 group :development do

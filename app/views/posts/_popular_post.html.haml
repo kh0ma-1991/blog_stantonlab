@@ -1,0 +1,14 @@
+.row
+  .col-lg-12
+    = image_tag post.image, class: 'img-fluid rounded margin-bottom-10', alt: 'post_image'
+.row
+  .col-lg-12
+    %h4= post.title
+.row
+  .col-lg-12
+    %article
+      %p
+        = truncate(post.body, length: 150) #TODO: It can be decorated by drapper
+.row
+  .col-lg-12
+    = link_to t('read_more'), post, class: 'btn btn-success margin-bottom-10'

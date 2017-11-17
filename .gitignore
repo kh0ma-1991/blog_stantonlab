@@ -19,3 +19,7 @@
 
 .byebug_history
 /tmp/
+
+# Ignore application configuration
+/config/application.yml
+/public/uploads/
