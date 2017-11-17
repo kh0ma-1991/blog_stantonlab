@@ -9,4 +9,6 @@
   %body
     .container
       = render 'layouts/admin/header'
+      %p.notice= notice
+      %p.alert= alert
       = yield

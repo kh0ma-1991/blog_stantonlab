@@ -29,3 +29,5 @@ images.each do |image|
               body: FFaker::Lorem.paragraph(15),
               views: rand(0..3))
 end
+
+Admin::User.create(email: 'admin@example.com', password: '12345678')
