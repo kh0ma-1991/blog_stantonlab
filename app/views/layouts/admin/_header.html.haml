@@ -15,5 +15,6 @@
             = link_to t('admin_panel.users'), admin_users_path, class: 'nav-link'
         %li.nav-item
           = link_to t('admin_panel.posts'), admin_posts_path, class: 'nav-link'
-        %li.nav-item
-          = link_to t('admin_panel.logout'), destroy_admin_user_session_path, method: :delete, class: 'nav-link'
+        - if current_admin_user
+          %li.nav-item
+            = link_to t('admin_panel.logout'), destroy_admin_user_session_path, method: :delete, class: 'nav-link'

@@ -1,5 +1,5 @@
 - @posts.each do |post|
-  .row.margin-top-10
+  .row.margin-top-10{id: "post_id_#{post.id}"}
     .col-lg-10.offset-md-1.blog-short
       %h1= post.title
       .row
